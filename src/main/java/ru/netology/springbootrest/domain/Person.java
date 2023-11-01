@@ -1,9 +1,23 @@
 package ru.netology.springbootrest.domain;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 import java.util.Objects;
 
 public class Person {
+
+    // Ставми настройки
+    // Size(минимальное количество символов должно состоять из двух min=2, max=20)
+    // @NotBlank - строчка не содержит пробельные символы
+    @NotBlank
+    @Size(min = 2, max = 20)
     private String name;
+    // Устанавливаем границы минимального и максимального возраста
+    @Min(0)
+    @Max(150)
     private int age;
 
 
