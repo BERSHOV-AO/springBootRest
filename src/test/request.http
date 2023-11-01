@@ -1,12 +1,22 @@
 POST http://localhost:8080/hello
 Content-Type: application/json
-
 {
   "name": "Ivan",
   "age": 43
 }
-
 ###
-
 GET http://localhost:8080/hello?name=Oleg&age=34
+Content-Type: application/json
+###
+GET http://localhost:8080/error
+Content-Type: application/json
+###
+GET http://localhost:8080/error/123
+Content-Type: application/json
+###
+GET http://localhost:8080/error/iae
+Content-Type: application/json
+###
+###
+GET http://localhost:8080/another/iae
 Content-Type: application/json
