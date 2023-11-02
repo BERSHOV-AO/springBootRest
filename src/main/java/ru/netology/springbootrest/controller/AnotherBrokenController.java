@@ -15,4 +15,9 @@ public class AnotherBrokenController {
     public String throwException() {
         throw new IllegalArgumentException("throwException");
     }
+
+//    @ExceptionHandler(RuntimeException.class)
+//    public ResponseEntity<String> reHandler(RuntimeException e) {
+//        return new ResponseEntity<>("Exception in throwException method", HttpStatus.I_AM_A_TEAPOT);
+//    }
 }
