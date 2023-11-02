@@ -11,13 +11,14 @@ import ru.netology.springbootrest.domain.Person;
 @RestController
 public class AnotherBrokenController {
 
+//    @GetMapping("/iae")
+//    public String throwException() {
+//        throw new IllegalArgumentException("throwException");
+//    }
+
+    // берем другую ошибку, наследуемую от RuntimeException
     @GetMapping("/iae")
     public String throwException() {
-        throw new IllegalArgumentException("throwException");
+        throw new IndexOutOfBoundsException("IndexOutOfBoundsException");
     }
-
-//    @ExceptionHandler(RuntimeException.class)
-//    public ResponseEntity<String> reHandler(RuntimeException e) {
-//        return new ResponseEntity<>("Exception in throwException method", HttpStatus.I_AM_A_TEAPOT);
-//    }
 }
