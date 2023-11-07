@@ -12,9 +12,11 @@ public class HelloController {
     private String from;
 
     // @Validated - установка валидных настроек
-    @PostMapping("/hello")
+    //@PostMapping("/hello")
+    @GetMapping("/hello")
     // @RequestBody  - обязательно указываем, иначе данные о person не дойдут. информация на вход
-    public String hello(@RequestBody @Validated Person guest) {
+    //public String hello(@RequestBody @Validated Person guest) {
+    public String hello(@Validated Person guest) {
         return String.format("Hello form %s to name %s age %d!", from, guest.getName(), guest.getAge());
     }
 }
